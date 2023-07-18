@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Organizations by Rank</title>
+</head>
+<body>
+    <h1>Organizations by Rank</h1>
+    <ul>
+    {% for organization in organizations %}
+        <li>
+            <h3>{{ organization.name }}</h3>
+            <img src="{{ organization.image }}" alt="{{ organization.name }} Image">
+            <p>{{ organization.description }}</p>
+            <p>Rank: {{ organization.rank }}</p>
+            <p>Locations: {{ organization.locations|join(', ') }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

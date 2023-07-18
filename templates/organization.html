@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crunchbase API - Organization</title>
+</head>
+<body>
+    <h1>Organization</h1>
+    <h2>{{ organization.name }}</h2>
+    <img src="{{ organization.image }}" alt="{{ organization.name }} Image" width="200" height="200">
+    <p>{{ organization.description }}</p>
+    <p>Rank: {{ organization.rank }}</p>
+    <p>Locations: {{ organization.locations|join(', ') }}</p>
+</body>
+</html>
